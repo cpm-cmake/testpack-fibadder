@@ -4,7 +4,7 @@ project(fibadder)
 
 include(./get_cpm.cmake)
 
-CPMAddPackage("gh:cpm-cmake/testpack-adder@1.0.0")
+CPMAddPackage("gh:cpm-cmake/testpack-adder@1.0.1")
 CPMAddPackage("gh:cpm-cmake/testpack-fibonacci@2.0")
 
 
