@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 3.14)
 
 project(fibadder)
 
+include(cmake/CPM.cmake)
+
 CPMAddPackage(
-  NAME adder
   GIT_REPOSITORY ../testpack-adder.git
   GIT_TAG v1.0.1
 )
 
 CPMAddPackage(
-  NAME fibonacci
   GIT_REPOSITORY ../testpack-fibonacci.git
   GIT_TAG v2.0
 )
