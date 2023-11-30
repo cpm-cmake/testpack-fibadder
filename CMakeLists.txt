@@ -2,11 +2,17 @@ cmake_minimum_required(VERSION 3.14)
 
 project(fibadder)
 
-include(./get_cpm.cmake)
+CPMAddPackage(
+  NAME adder
+  GIT_REPOSITORY ../testpack-adder.git
+  GIT_TAG v1.0.1
+)
 
-CPMAddPackage("gh:cpm-cmake/testpack-adder@1.0.1")
-CPMAddPackage("gh:cpm-cmake/testpack-fibonacci@2.0")
-
+CPMAddPackage(
+  NAME fibonacci
+  GIT_REPOSITORY ../testpack-fibonacci.git
+  GIT_TAG v2.0
+)
 
 add_library(fibadder STATIC
     code/fibadder/fibadder.hpp
